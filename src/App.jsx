@@ -1,32 +1,24 @@
-// import "./App.css";
-import WormholeConnect, {
-   config,
-  // WormholeConnectTheme,
-} from "@wormhole-foundation/wormhole-connect";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Homepage from "./pages/Homepage";
+import Swap from "./pages/Swap";
+import MainLayout from "./Layout/MainLayout";
+import About from "./pages/About";
 
 function App() {
-  const config = {
-    // Define the network
-    network: "Testnet",
-
-    // Define the chains
-    chains: ["Sui", "Avalanche"],
-
-    // rpcs: {
-    // 	Solana: 'https://mainnet.helius-rpc.com/?api-key=KEY'
-    // },
-    // UI configuration
-    ui: {
-      title: "ETH Enugu AfriSwap AI",
-    },
-  };
-
-  const theme = {
-    mode: "dark",
-    primary: "#78c4b6",
-  };
-
-  return <WormholeConnect config={config} theme={theme} />;
+  return (
+  <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />} >
+          <Route index element={<Homepage />} />
+            <Route path="/swap" element={<Swap />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    </>
+  )
 }
 
 export default App;
