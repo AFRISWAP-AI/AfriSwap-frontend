@@ -1,19 +1,42 @@
+
+
 import WormholeConnect, {
   config,
   // WormholeConnectTheme,
 } from "@wormhole-foundation/wormhole-connect";
 
-function Swap() {
+function WormholeSwap({ chain, network }) {
+  // Map the selected chain/network to Wormhole configuration
+  const getWormholeChains = (selectedChain) => {
+    const chainMapping = {
+      'ethereum': 'Ethereum',
+      'polygon': 'Polygon', 
+      'avalanche': 'Avalanche',
+      'bsc': 'BSC',
+      'fantom': 'Fantom',
+      'sui': 'Sui'
+    };
+    
+    // Use selected chain or default to Sui and Avalanche
+    const mappedChain = chainMapping[selectedChain] || 'Sui';
+    return [mappedChain, 'Avalanche']; // Always include Avalanche as second option
+  };
+
+  const getWormholeNetwork = (selectedNetwork) => {
+    return selectedNetwork === 'mainnet' ? 'Mainnet' : 'Testnet';
+  };
+
   const config = {
-    // Define the network
-    network: "Testnet",
-
-    // Define the chains
-    chains: ["Sui", "Avalanche"],
-
+    // Define the network based on selection
+    network: getWormholeNetwork(network),
+    
+    // Define the chains based on selection
+    chains: getWormholeChains(chain),
+    
     // rpcs: {
     // 	Solana: 'https://mainnet.helius-rpc.com/?api-key=KEY'
     // },
+    
     // UI configuration
     ui: {
       title: "ETH Enugu AfriSwap AI",
@@ -28,4 +51,4 @@ function Swap() {
   return <WormholeConnect config={config} theme={theme} />;
 }
 
-export default Swap;
+export default WormholeSwap;

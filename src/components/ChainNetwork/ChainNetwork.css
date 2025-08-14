@@ -1,0 +1,86 @@
+.chain-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.chain-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.chain-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.chain-header p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.chain-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.error {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #dc2626;
+}
+
+.button-wrapper {
+  padding-top: 1.5rem;
+}
+
+.next-btn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-in-out;
+}
+
+.next-btn:hover {
+  background: #1d4ed8;
+}
+
+.next-icon {
+  margin-left: 0.5rem;
+  width: 16px;
+  height: 16px;
+}
+
+.selected-info {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #eff6ff;
+  border-radius: 8px;
+}
+
+.selected-info p {
+  font-size: 0.9rem;
+  color: #1e3a8a;
+}
