@@ -1,31 +1,31 @@
-import React from 'react';
-import Homepage from './pages/Homepage/Homepage';
-import AboutPage from './pages/About/About';
-import SelectChainNetwork from './pages/SelectChainNetwork/SelectChainNetwork';
-import Swap from './pages/Swap';
+import React from "react";
+import Homepage from "./pages/Homepage/Homepage";
+import AboutPage from "./pages/About/About";
+import SelectChainNetwork from "./pages/SelectChainNetwork/SelectChainNetwork";
+import Swap from "./pages/Swap";
 
 const useRouter = () => {
   const [currentRoute, setCurrentRoute] = React.useState(() => {
     const path = window.location.pathname;
     const params = new URLSearchParams(window.location.search);
     return {
-      path: path === '/' ? 'home' : path.substring(1),
-      params: Object.fromEntries(params)
+      path: path === "/" ? "home" : path.substring(1),
+      params: Object.fromEntries(params),
     };
   });
 
   const navigate = (path, params = {}) => {
-    const route = path === '/' ? 'home' : path;
+    const route = path === "/" ? "home" : path;
     setCurrentRoute({ path: route, params });
 
     const searchParams = new URLSearchParams(params);
     const url =
-      path === '/'
-        ? '/'
+      path === "/"
+        ? "/"
         : `/${route}${
-            searchParams.toString() ? '?' + searchParams.toString() : ''
+            searchParams.toString() ? "?" + searchParams.toString() : ""
           }`;
-    window.history.pushState(null, '', url);
+    window.history.pushState(null, "", url);
   };
 
   React.useEffect(() => {
@@ -33,13 +33,13 @@ const useRouter = () => {
       const path = window.location.pathname;
       const params = new URLSearchParams(window.location.search);
       setCurrentRoute({
-        path: path === '/' ? 'home' : path.substring(1),
-        params: Object.fromEntries(params)
+        path: path === "/" ? "home" : path.substring(1),
+        params: Object.fromEntries(params),
       });
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   return { currentRoute, navigate };
@@ -50,13 +50,13 @@ const App = () => {
 
   const renderPage = () => {
     switch (currentRoute.path) {
-      case 'home':
+      case "home":
         return <Homepage navigate={navigate} />;
-      case 'about':
+      case "about":
         return <AboutPage />;
-      case 'select':
+      case "select":
         return <SelectChainNetwork navigate={navigate} />;
-      case 'swap':
+      case "swap":
         return <Swap navigate={navigate} params={currentRoute.params} />;
       default:
         return <Homepage navigate={navigate} />;
@@ -64,12 +64,7 @@ const App = () => {
   };
   console.log("Current route:", currentRoute.path);
 
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {renderPage()}
-    </div>
-  );
+  return <div className="min-h-screen bg-gray-50">{renderPage()}</div>;
 };
 
 export default App;
