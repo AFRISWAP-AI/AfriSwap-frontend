@@ -1,26 +1,31 @@
 import './About.css';
-import React from 'react';
+import { FaLock } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { FaRobot } from "react-icons/fa";
+import { GoRuby } from "react-icons/go";
+import { LuAlarmClock } from "react-icons/lu";
 
 const AboutPage = () => {
   const features = [
-    { title: 'Secure Token Swaps', description: 'Advanced security protocols protect your assets during every transaction', icon: '🔒' },
-    { title: 'Multi-Chain Support', description: 'Ethereum, Polygon, BSC, Avalanche, and Fantom networks supported', icon: '🌐' },
-    { title: 'Real-Time Pricing', description: 'Live market data ensures you get the best possible swap rates', icon: '📊' },
-    { title: 'AI-Powered Suggestions', description: 'Smart routing algorithms find the most efficient swap paths', icon: '🤖' },
-    { title: 'Low Transaction Fees', description: 'Competitive fees across all networks with transparent pricing', icon: '💎' },
-    { title: '24/7 Availability', description: 'Trade anytime with our always-on decentralized platform', icon: '⏰' }
+    { title: 'Secure Token Swaps', description: 'Advanced security protocols protect your assets during every transaction', icon: <FaLock /> },
+    { title: 'Multi-Chain Support', description: 'Ethereum, Polygon, BSC, Avalanche, and Fantom networks supported', icon: <TbWorld /> },
+    { title: 'Real-Time Pricing', description: 'Live market data ensures you get the best possible swap rates', icon: <FaArrowTrendUp /> },
+    { title: 'AI-Powered Suggestions', description: 'Smart routing algorithms find the most efficient swap paths', icon: <FaRobot /> },
+    { title: 'Low Transaction Fees', description: 'Competitive fees across all networks with transparent pricing', icon: <GoRuby /> },
+    { title: '24/7 Availability', description: 'Trade anytime with our always-on decentralized platform', icon: <LuAlarmClock /> }
   ];
 
   return (
     <div className="about-page">
       <div className="about-container">
         <div className="about-section">
-          <h1 className="about-title">About SwapChain</h1>
+          <h1 className="about-title">About AfriSwap</h1>
           <p className="about-paragraph">
-            SwapChain is a decentralized exchange platform that enables seamless token swapping across multiple blockchain networks. Our mission is to bridge the gap between different blockchain ecosystems, providing users with a unified, secure, and efficient trading experience.
+            AfriSwap is a decentralized exchange platform that enables seamless token swapping across multiple blockchain networks. Our mission is to bridge the gap between different blockchain ecosystems, providing users with a unified, secure, and efficient trading experience.
           </p>
           <p className="about-paragraph">
-            Built on the principles of decentralization and user empowerment, SwapChain eliminates the complexities traditionally associated with cross-chain trading. Whether you're a DeFi veteran or new to crypto, our platform provides the tools and infrastructure you need to swap tokens with confidence.
+            Built on the principles of decentralization and user empowerment, AfriSwap eliminates the complexities traditionally associated with cross-chain trading. Whether you're a DeFi veteran or new to crypto, our platform provides the tools and infrastructure you need to swap tokens with confidence.
           </p>
         </div>
 

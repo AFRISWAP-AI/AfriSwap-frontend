@@ -1,6 +1,6 @@
 .select-chain-page {
   min-height: 100vh;
-  background-color: #f9fafb;
+  background-color: #fff7ed;
 }
 
 .content-wrapper {
@@ -20,21 +20,26 @@
 
 .back-btn {
   color: #4b5563;
+  text-decoration: none;
+  padding: 6px;
   background: none;
   border: none;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   transition: color 0.2s ease;
-  font-size: 1rem;
+  font-size: 17px;
 }
 
 .back-btn:hover {
   color: #111827;
+  background-color: #8b4513;
+  border-radius: 5px;
 }
 
 .back-icon {
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
+  align-self: center;
 }

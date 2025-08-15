@@ -4,12 +4,12 @@ A complete React-based Web3 token swapping website with chain/network selection,
 
 ## 🚀 Features
 
-- **Multi-page Navigation**: Home, About, Chain Selection, and Swap pages
-- **Chain/Network Selection**: Searchable dropdowns for blockchain selection
-- **Responsive Design**: Mobile-friendly interface with modern UI
-- **Custom Routing**: Built-in navigation system without external dependencies
-- **Mock Wallet Integration**: Connect wallet functionality (ready for real integration)
-- **Modular Architecture**: Clean, maintainable code structure
+- **Multi-page Navigation**: Home, About, and Swap pages.
+- **Chain/Network Selection**: Searchable dropdowns for blockchain selection.
+- **Responsive Design**: Mobile-friendly interface with modern UI.
+- **Custom Routing**: Built-in navigation system without external dependencies.
+- **Mock Wallet Integration**: Connect wallet functionality (ready for real integration).
+- **Modular Architecture**: Clean, maintainable code structure.
 
 ## 📁 Project Structure
 
@@ -51,21 +51,16 @@ src/
 
 ## 🔄 User Flow
 
-1. **Home Page** → User lands on hero section with "Get Started" button
+1. **Home Page** → User lands on the clean Homepage with enigh information about the site
 2. **Chain Selection** → User selects blockchain and network from searchable dropdowns
 3. **Swap Page** → User is redirected with selected parameters to your existing Swap component
 
 ## 🔧 Integration with Existing Swap Component
 
-### Replace Mock Component
-
-In `src/pages/Swap.jsx`, replace `MockSwapComponent` with your existing swap component:
 
 ```javascript
-// Instead of MockSwapComponent
 import YourSwapComponent from './YourSwapComponent';
 
-// In the SwapPage component:
 <YourSwapComponent 
   chain={chain} 
   network={network} 
@@ -94,13 +89,13 @@ Edit `src/data/chains.js`:
 export const chains = [
   { value: 'ethereum', label: 'Ethereum' },
   { value: 'polygon', label: 'Polygon' },
-  { value: 'your-chain', label: 'Your Chain' }, // Add new chain
+  { value: 'your-chain', label: 'Your Chain' }, 
 ];
 
 export const networks = [
   { value: 'mainnet', label: 'Mainnet' },
   { value: 'testnet', label: 'Testnet' },
-  { value: 'your-network', label: 'Your Network' }, // Add new network
+  { value: 'your-network', label: 'Your Network' },
 ];
 ```
 
@@ -108,7 +103,7 @@ export const networks = [
 
 The project uses Tailwind CSS classes for styling. Customize colors, spacing, and layout by modifying the className attributes in each component.
 
-### Wallet Integration
+<!-- ### Wallet Integration
 
 Replace the mock wallet connection in `ConnectWalletButton.jsx`:
 
@@ -123,7 +118,7 @@ const handleConnect = async () => {
     setIsConnected(true);
   }
 };
-```
+``` -->
 
 ## 🎯 Key Components
 
@@ -189,7 +184,7 @@ MIT License - feel free to use this code for your hackathon project!
 
 ---
 
-## 🚧 Next Steps for Integration
+<!-- ## 🚧 Next Steps for Integration
 
 1. **Replace MockSwapComponent** with your existing swap logic
 2. **Add real wallet connection** functionality
@@ -197,6 +192,6 @@ MIT License - feel free to use this code for your hackathon project!
 4. **Add transaction status handling**
 5. **Implement error boundaries**
 6. **Add loading states**
-7. **Include transaction history**
+7. **Include transaction history** -->
 
 Ready to integrate your existing swap component and ship your hackathon project! 🎉
