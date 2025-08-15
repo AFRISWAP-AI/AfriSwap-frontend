@@ -1,10 +1,12 @@
 import React from 'react';
 import './SelectChainNetwork.css';
+import { Link } from 'react-router-dom';
 import ChainNetwork from '../../components/ChainNetwork/ChainNetwork';
 
-const SelectChainNetwork = ({ navigate }) => {
+const SelectChainNetwork = () => {
   const handleSubmit = ({ chain, network }) => {
-    navigate('swap', { chain, network });
+    // We'll update this navigation later when swap route is set up
+    console.log('Selected:', chain, network);
   };
 
   return (
@@ -14,7 +16,7 @@ const SelectChainNetwork = ({ navigate }) => {
           <ChainNetwork onSubmit={handleSubmit} />
 
           <div className="back-section">
-            <button onClick={() => navigate('home')} className="back-btn">
+            <Link to="/" className="back-btn">
               <svg
                 className="back-icon"
                 fill="none"
@@ -29,7 +31,7 @@ const SelectChainNetwork = ({ navigate }) => {
                 />
               </svg>
               Back to Home
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
+import { useNavigate } from "react-router-dom";
 import { chains, networks } from '../../data/Chain';
 import './ChainNetwork.css';
 
@@ -8,9 +9,11 @@ const ChainNetwork = ({ onSubmit }) => {
   const [selectedNetwork, setSelectedNetwork] = useState('');
   const [errors, setErrors] = useState({});
 
-  const handleNext = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
     const newErrors = {};
-    
+
     if (!selectedChain) {
       newErrors.chain = 'Please select a chain';
     }
@@ -25,6 +28,9 @@ const ChainNetwork = ({ onSubmit }) => {
 
     setErrors({});
     onSubmit({ chain: selectedChain, network: selectedNetwork });
+
+    // Navigate after successful validation
+    navigate("/swap");
   };
 
   return (
@@ -58,7 +64,7 @@ const ChainNetwork = ({ onSubmit }) => {
         </div>
 
         <div className="button-wrapper">
-          <button onClick={handleNext} className="next-btn">
+          <button onClick={handleNavigate} className="next-btn">
             Next
             <svg className="next-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" />

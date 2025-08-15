@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.34rem 2rem;
   position: relative;
 }
 
@@ -216,6 +216,7 @@
   color: #333;
   font-size: 1.1rem;
   font-weight: 500;
+  text-decoration: none;
   padding: 1rem 2rem;
   text-align: left;
   cursor: pointer;
@@ -364,6 +365,9 @@ body {
   .mobile-nav-link {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+  }
+  .myConnectbtn {
+    display: none;
   }
 }
 
