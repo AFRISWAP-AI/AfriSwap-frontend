@@ -1,0 +1,65 @@
+/* TESTIMONIALS */
+.testimonials {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.Testimonial-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Testimonial-header p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5rem;
+  color: #454545;
+}
+
+.Testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.Testimonial-card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.Testimonial-card h5 {
+  background: white;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.My-p1 {
+  font-weight: bold;
+}
+
+.testimonial-subtext {
+  text-align: left;
+}
+
+/* SCROLL ANIMATIONS */
+/* .fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+} */

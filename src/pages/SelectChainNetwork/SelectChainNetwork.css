@@ -1,0 +1,40 @@
+.select-chain-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.content-wrapper {
+  padding-top: 5rem;
+}
+
+.form-container {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.back-section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.back-btn {
+  color: #4b5563;
+  background: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  color: #111827;
+}
+
+.back-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}

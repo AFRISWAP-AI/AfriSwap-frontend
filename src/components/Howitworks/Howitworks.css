@@ -1,0 +1,85 @@
+/* HOW IT WORKS */
+.how {
+  padding: 3rem 2rem;
+  background: #fafafa;
+}
+
+.how-it-works {
+  padding: 4rem 2rem;
+  background: #fff6f2;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.how-it-works .subtitle {
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.step-card {
+  /* background: white; */
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  width:400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.step-number {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #ff6b6b, #ff8a05);
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.step-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+
+/* Fade-up animation
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+} */
+/* 
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+ */
