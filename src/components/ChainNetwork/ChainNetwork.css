@@ -1,7 +1,7 @@
 .chain-container {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   max-width: 500px;
   margin: auto;
@@ -50,7 +50,7 @@
 
 .next-btn {
   width: 100%;
-  background: #2563eb;
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 8px;
@@ -64,7 +64,9 @@
 }
 
 .next-btn:hover {
-  background: #1d4ed8;
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .next-icon {
@@ -76,11 +78,11 @@
 .selected-info {
   margin-top: 1rem;
   padding: 0.75rem;
-  background: #eff6ff;
+  background-color: #fff7ed;
   border-radius: 8px;
 }
 
 .selected-info p {
   font-size: 0.9rem;
-  color: #1e3a8a;
+  color: #333;
 }

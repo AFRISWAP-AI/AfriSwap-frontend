@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './ConnectWallet.css';
 
 const ConnectWallet = ({ navigate }) => {
@@ -135,7 +136,7 @@ const ConnectWallet = ({ navigate }) => {
             <h3>New to wallets?</h3>
             <p>A wallet lets you connect to ETH Enugu AfriSwap AI and manage your crypto. We recommend starting with MetaMask.</p>
           </div>
-          <button className="back-btn" onClick={() => navigate('home')}>← Back to Home</button>
+          <Link to="/" className="back-btn">← Back to Home</Link>
         </div>
       </div>
     </div>

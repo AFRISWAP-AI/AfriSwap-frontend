@@ -8,7 +8,7 @@ import "./Features.css";
 const Features = () => {
   return (
     <section className="features fade-up">
-      <span className="badge">Powered by AI</span>
+      <span className="feature-badge">Powered by AI</span>
       <h2>DeFi Made Simple for Africa</h2>
       <p className="subtitle">
         No more complex interfaces or technical jargon. Just tell our AI what
